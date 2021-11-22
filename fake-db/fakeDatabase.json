@@ -1,0 +1,44 @@
+{
+  "todoList": [
+    {
+      "id": 1,
+      "todo": "Intro ReactJS",
+      "date": "20/11/2021",
+      "location": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=688&q=80",
+      "note": "Prepare VSCode, Node js and CRA",
+      "status": "Done"
+    },
+    {
+      "date": "",
+      "todo": "Vacation - Beach",
+      "location": "https://idetrips.com/wp-content/uploads/2020/07/petitenget-beach-vibe-640x360.jpg",
+      "note": "Liburan ke bali",
+      "status": "on going",
+      "id": 2
+    },
+    {
+      "date": "",
+      "todo": "Belajar",
+      "location": "https://media.istockphoto.com/photos/teenage-boy-wearing-headphones-works-at-desk-in-his-bedroom-picture-id639710652",
+      "note": "belajar ngoding dari purwadika",
+      "status": "on going",
+      "id": 3
+    },
+    {
+      "date": "2021-11-11",
+      "todo": "test",
+      "location": "test",
+      "note": "test",
+      "status": "on going",
+      "id": 4
+    },
+    {
+      "date": "2021-11-11",
+      "todo": "test",
+      "location": "test",
+      "note": "test",
+      "status": "on going",
+      "id": 5
+    }
+  ]
+}
