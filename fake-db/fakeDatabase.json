@@ -23,6 +23,14 @@
       "note": "belajar ngoding dari purwadika",
       "status": "on going",
       "id": 3
+    },
+    {
+      "date": "2021-11-18",
+      "todo": "Bekerja",
+      "location": "https://images.unsplash.com/photo-1633113216385-dcb68bfcd3b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "note": "bekerja",
+      "status": "on going",
+      "id": 4
     }
   ]
 }

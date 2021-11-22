@@ -42,6 +42,10 @@ class Form extends React.Component {
         }).then((response) => {
             console.log(response.data)
             this.getData()
+            this.refs.date.value="";
+            this.refs.todo.value="";
+            this.refs.location.value="";
+            this.refs.note.value="";
         }).catch((err) => {
             console.log(err)
         })
