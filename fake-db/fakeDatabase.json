@@ -23,22 +23,6 @@
       "note": "belajar ngoding dari purwadika",
       "status": "on going",
       "id": 3
-    },
-    {
-      "date": "2021-11-11",
-      "todo": "test",
-      "location": "test",
-      "note": "test",
-      "status": "on going",
-      "id": 4
-    },
-    {
-      "date": "2021-11-11",
-      "todo": "test",
-      "location": "test",
-      "note": "test",
-      "status": "on going",
-      "id": 5
     }
   ]
 }

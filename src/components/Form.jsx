@@ -78,10 +78,10 @@ class Form extends React.Component {
     }
 
     btDelete = (idx) => {
-        axios.delete(`http://localhost:2000/todoList`)
-        // let temp = [...this.state.todoList]
-        // temp.splice(idx, 1)
-        // this.setState({ todoList: temp })
+        // axios.delete(`http://localhost:2000/todoList`)
+        let temp = [...this.state.todoList]
+        temp.splice(idx, 1)
+        this.setState({ todoList: temp })
     }
 
     btEdit = (idx) => {
@@ -95,26 +95,32 @@ class Form extends React.Component {
     printData = () => {
         return this.state.todoList.map((value, index) => {
             if (this.state.selectedIdx == index) {
-                return (<div class="modal fade" id="editform" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                console.log("skjfshk")
+                return (<div class="modal fade" id="edit" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabelLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Edit your list</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <h5 class="modal-title" id="exampleModalLabelLabel">Edit</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close " onClick={() => this.setState({ selectedIdx: null })}>
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
                                 <div className="d-flex flex-column justify-items-center">
+                                    Date
                                     <td><input type="date" defaultValue={value.date} /></td>
+                                    To do
                                     <td><input type="text" defaultValue={value.todo} /></td>
+                                    Location
                                     <td><input type="text" defaultValue={value.location} /></td>
+                                    Note
                                     <td><input type="text" defaultValue={value.note} /></td>
+                                    Status
                                     <td><input type="text" defaultValue={value.status} /></td>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button className="btn btn-warning" data-dismiss="modal" aria-label="Close" onClick={() => this.setState({ selectedIdx: null })}>Cancel</button>
                                 <button type="button" class="btn btn-primary" onClick={this.btSubmit}>Submit</button>
                             </div>
                         </div>
@@ -143,17 +149,12 @@ class Form extends React.Component {
                         <td>{value.note}</td>
                         <td>{value.status}</td>
                         <td>
+                            <button className="btn btn-primary" type="button" data-toggle="modal" data-target="#edit" onClick={() => this.btEdit(index)}>Edit</button>
                             <button className="btn btn-danger" type="button" onClick={() => this.btDelete(index)}>Delete</button>
-                            {/* <button className="btn btn-warning" type="button" onClick={() => this.btEdit(index)}>Edit</button>
-                             */}
-                            <button type="button" class="btn btn-primary ml-0" data-toggle="modal" data-target="#editform">
-                                Edit
-                            </button>
                         </td>
                     </tr>
                 )
             }
-
         })
     }
 
